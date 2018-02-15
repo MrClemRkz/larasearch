@@ -69,3 +69,18 @@ composer require laravel/scout
 php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
 ```
 Then autoload the provider using configuration files and make Product searchable by adding **Laravel\Scout\Searchable** trait to Product Model.
+
+## Installing Algolia - Search Driver
+```apacheconfig
+composer require algolia/algoliasearch-client-php
+```
+SignUp in Algolia and update .env file with following and Add AdminAPIKey
+```apacheconfig
+ALGOLIA_APP_ID=YourApplicationID
+ALGOLIA_SECRET=YourAPIKey
+```
+Do the manual indexing:
+```apacheconfig
+php artisan scout:import "App\Product"
+```
+Now you may find data on Algolia account > Indices
