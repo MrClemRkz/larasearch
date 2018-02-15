@@ -70,7 +70,7 @@ php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
 ```
 Then autoload the provider using configuration files and make Product searchable by adding **Laravel\Scout\Searchable** trait to Product Model.
 
-## Installing Algolia - Search Driver
+### Installing Algolia - Search Driver
 ```apacheconfig
 composer require algolia/algoliasearch-client-php
 ```
@@ -84,3 +84,21 @@ Do the manual indexing:
 php artisan scout:import "App\Product"
 ```
 Now you may find data on Algolia account > Indices
+
+### Update SearchController to get search results
+After the update run laravel project. To run laravel project, goto project folder on terminal and run:
+```apacheconfig
+php artisan serve
+```
+Url will be shown, where the laravel project is run as below:
+```apacheconfig
+Laravel development server started: <http://127.0.0.1:8000>
+```
+Then goto url:
+```apacheconfig
+http://<your-siteurl>/api/search?q=<your-keyword>
+```
+eg:-
+```apacheconfig
+http://localhost:8000/api/search?q=cupa
+```
