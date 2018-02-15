@@ -2,11 +2,12 @@
 Implementing search functionality using Laravel Scout and Vue js
 
 ## technologies used at the time of development
-- PHP 7.1.14
-- Laravel 5.6.3
+- php 7.1.14
+- laravel 5.6.3
 - laravel/scout 4.0
 - phpunit 7.0
 - mysql 5.7.20
+- bootstrap 4.0
 
 ## Commits / Steps to implement
 
@@ -102,3 +103,7 @@ eg:-
 ```apacheconfig
 http://localhost:8000/api/search?q=cupa
 ```
+
+### Setup html for the search
+Added a search form.
+
