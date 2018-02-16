@@ -107,3 +107,6 @@ http://localhost:8000/api/search?q=cupa
 ### Setup html for the search
 Added a search form.
 
+### Setup Vue.js and data bindings
+create new file for vue js bindings eg: public/js/vue-search.js
+    
