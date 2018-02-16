@@ -26,7 +26,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search Keyword" v-model="query">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" v-if="!loading">Search</button>
+                        <button class="btn btn-outline-secondary" @click="search()" v-if="!loading" >Search</button>
                         <button class="btn btn-outline-secondary" disabled="disabled" v-if="loading">Searching ...</button>
                     </div>
                 </div>
@@ -37,8 +37,29 @@
             </div>
         </div>
     </div>
-    <div id="products" class="row list-group">
-    </div>
+    <br>
+    <div id="products" class="row">
+        <div class="col-4 mb-3" v-for="product in products">
+            <div class="card">
+                <img class="card-img-top" :src="product.image" alt="@{{ product.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">@{{ product.title }}</h5>
+                    <p class="card-text">@{{ product.description }}</p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead">@{{ product.price }}$</p>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .row -->
+    <br>
+    <hr>
+    <br>
 </div>
 
 <!-- Optional JavaScript -->

@@ -109,4 +109,8 @@ Added a search form.
 
 ### Setup Vue.js and data bindings
 create new file for vue js bindings eg: public/js/vue-search.js
-    
+
+### Retrieve and show data
+
+
+## Complete
