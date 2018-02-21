@@ -51,6 +51,16 @@ php artisan make:factory ProductFactory --model=Product
 ```
 Then in the new factory file we set data to each columns/fields of Products table with auto generated values using Faker class.
 
+#####Steps to create dummy data:
+get into tinker environment supplied by laravel
+```angularjs
+php artisan tinker
+```
+Then run the following command:
+```angularjs
+factory(App\Product::class, 100)->create();
+```
+
 ### Setup api routing to retrieve data
 First we create the controller class and it's method that is to be called by the route.
 ```angular2html
